@@ -12,4 +12,9 @@ class User extends Model
         'name',
         'age',
     ];
+
+    public function validate($data)
+    {
+        
+    }
 }

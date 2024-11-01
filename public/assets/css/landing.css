@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #03e5b7;
+    background-image: linear-gradient(315deg, #03e5b7 0%, #037ade 74%);   
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.header-img{
+    width: 55%;
+    color: #fff;
+    position:absolute;
+    top: 90%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+
+}
+
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* Set the background color to white */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better separation */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height:5%;
+}
+
+nav img {
+    width: 70px;
+    height: auto;
+    align-items: center;
+    margin-right: 20px;
+
+}
+
+nav a {
+    display: flex;
+    align-items: center; /* Align the logo and text vertically */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 35px;
+
+}
+
+
+
+.nav-links {
+    flex: 5;
+    text-align: center;
+    
+}
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    color: #0f0e0e;
+    text-decoration: none;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+    gap: 5px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #36f48f;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li .appointment-btn::after {
+    content: none !important;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+}
+
+/* Reset text-decoration in case it's inheriting from another style */
+.nav-links ul li .appointment-btn {
+    text-decoration: none !important;
+    position: relative;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.login-dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position below the Login button */
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    min-width: 120px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 5px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-content p {
+    display: block;
+    text-align: left;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #e2dfdf;
+}
+
+.dropdown-content p {
+    cursor: default; /* Keeps the cursor normal */
+    margin: 0; /* Optional: adjust margin for better alignment */
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.text-box h1 {
+    font-size: 60px;
+    line-height: 1.5;
+    margin: 10px 0 30px;
+}
+
+.text-box p{
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    left: 50%;
+    letter-spacing: 0.1cm;
+}
+
+.hero-btn1 {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 20px;
+    background:rgb(66, 182, 122);
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+   
+}
+
+
+.hero-btn1:hover {
+    border: 1px solid #36f48f;
+    background:  rgb(66, 182, 122);
+    transition: 0.1s;
+}
+
+.appointment-btn {
+    
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(66, 182, 122);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition:  0.1s ;
+    
+}
+
+.appointment-btn:hover {
+    cursor: pointer;
+    background-color: #03e5b7;
+    background-image: linear-gradient(315deg, #03e5b7 0%, #037ade 74%);   background-position: center;
+
+}
+
+
+nav .fa {
+    display: none;
+}
+
+
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #f44336;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa {
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul {
+        padding: 30px;
+    }
+}
+
+/*--------- course------------------------------*/
+
+.course {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: rgba(0, 4, 4, 0.467);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-col {
+    flex-basis: 31%;
+    background: rgb(197, 234, 244);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.course-col p {
+    text-align: center;
+}
+
+
+
+/*--------- Facilities------------------------------*/
+
+.facilities {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 40px;
+}
+
+
+.facilities-col h3 {
+    text-align: center;
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.facilities-col p {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+
+/*------------------------Footer-------------------------------*/
+footer {
+    background-color: #03e5b7;
+    background-image: linear-gradient(315deg, #03e5b7 0%, #037ade 74%); 
+    color: #fff;
+    padding: 30px 0;
+    text-align: left;
+    
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-section p, .footer-section a, .footer-section ul li {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #fff;
+}
+
+.socials a {
+    color: #ffff;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #ffff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px 15px;
+    background-color: rgb(66, 182, 122);
+    background-position: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #03e5b7;
+    background-image: linear-gradient(315deg, #03e5b7 0%, #037ade 74%); 
+    background-position: center;
+}
+
+.footer-bottom {
+    
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #ffff;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #ffff;
+}

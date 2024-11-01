@@ -33,6 +33,12 @@ class App
 
 		$controller = new $this->controller;
 
+		/** check if a method is set and exist */
+		if (isset($URL[1]) && method_exists($controller, $URL[1])) {
+            $this->method = $URL[1];
+            unset($URL[1]);
+        }
+
 		call_user_func_array([$controller,$this->method], []);
 
 	}	
